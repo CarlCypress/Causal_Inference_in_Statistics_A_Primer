@@ -1,8 +1,8 @@
 # Causal Inference in Statistics: A Primer
 
-本项目针对 **Judea Pearl** 教授的《统计因果推理入门》( [Causal Inference in Statistics: A Primer](https://bayes.cs.ucla.edu/PRIMER/pearl-etal-2016-primer-errata-pages-august2021.pdf) )一书进行理解翻译。
+本项目针对 **Judea Pearl** 教授的《统计因果推理入门》( [Causal Inference in Statistics: A Primer](https://bayes.cs.ucla.edu/PRIMER/pearl-etal-2016-primer-errata-pages-august2021.pdf) )一书进行理解翻译。同时，在正文中存在 `注：` 的字体为本人额外思考，可无视。
 
-**注*：** 已有**杨矫云等人**对该书进行了翻译，因Judea Pearl教授于2016年发布第一版该书(存在错误)，故中文版翻译也存在问题。在本项目当中问题得到了解决，甚至发现了一些新的问题？并进行了修正，若仍存在问题，欢迎指出！
+**注：** 已有**杨矫云等人**对该书进行了翻译，因Judea Pearl教授于2016年发布第一版该书(存在错误)，故中文版翻译也存在问题。在本项目当中问题得到了解决，甚至发现了一些新的问题？并进行了修正，若仍存在问题，欢迎指出！
 
 全书一共四个章节，因此本人笔记亦分为四个章节进行阐述。
 
