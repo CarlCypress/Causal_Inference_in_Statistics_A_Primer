@@ -98,7 +98,7 @@
 
 #### 1.4.1
 
-![fig_1.8](/Users/huangdenan/github/personal_github/Causal_Inference_in_Statistics_A_Primer/docs/images/fig_1.8.png)
+![fig_1.8](../images/fig_1.8.png)
 
 如图1.8所示：
 
