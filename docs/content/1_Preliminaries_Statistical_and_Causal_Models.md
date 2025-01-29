@@ -354,7 +354,6 @@ $$
 \begin{aligned}
 P(次品)&=P(次品\mid A)P(A)+P(次品\mid B)P(B)\\
 &=\frac{0.30}{5000}+\frac{0.70}{10000}=\frac{1.30}{10000}=0.00013
-
 \end{aligned}
 $$
 
