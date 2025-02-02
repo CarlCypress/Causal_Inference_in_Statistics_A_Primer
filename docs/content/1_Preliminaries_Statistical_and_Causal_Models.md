@@ -908,7 +908,7 @@ $$
 
 
 $$
-f = \left\{ f_X : W_X \to X \mid X \in V \right\}
+f = { f_X : W_X \to X \mid X \in V }
 $$
 
 
