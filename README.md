@@ -16,6 +16,9 @@
   - [3. 干预的效果](./docs/answer/3_The_Effects_of_Interventions.md)
   - [4. 反事实及其应用](./docs/answer/4_Counterfactuals_and_Their_Applications.md)
 
+存在部分公式中的大括号 `{}` 无法正常显示的问题，故建议下载后进行阅读。
 
 最后，将将整个内容进行了汇总，打印了一份统计因果推理的 [pdf电子书](./docs/Causal_Inference_in_Statistics_A_Primer.pdf) ，方便阅读。
+
+
 
