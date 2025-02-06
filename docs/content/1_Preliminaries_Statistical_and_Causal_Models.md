@@ -937,7 +937,6 @@ $$
 
 $$
 \begin{aligned}
-
 f_X:X=U_X\\
 f_Y:Y=\frac{X}{3}+U_Y\\
 f_Z:Z=\frac{Y}{16}+U_Z
