@@ -442,9 +442,11 @@ $$
 
 
 $$
-I=选择卡的标识(卡1, 卡2, 卡3)\newline 
-C_D=朝下一面的颜色(黑脸, 白脸)\newline
+\begin{aligned}
+I=选择卡的标识(卡1, 卡2, 卡3)\\ 
+C_D=朝下一面的颜色(黑脸, 白脸)\\ 
 C_U=朝上一面的颜色(黑脸, 白脸)
+\end{aligned}
 $$
 
 
@@ -930,10 +932,16 @@ V=\{身高,性别,成绩\},U=\{U_1,U_2,U_3\},F=\{f_1,f_2\}\\
 $$
 
 $$
-V=\{X,Y,Z\},U={U_X,U_Y,U_Z},F={f_X,f_Y,f_Z}\newline
-f_X:X=U_X\newline
-f_Y:Y=\frac{X}{3}+U_Y\newline
+V=\{X,Y,Z\},U={U_X,U_Y,U_Z},F={f_X,f_Y,f_Z}
+$$
+
+$$
+\begin{aligned}
+
+f_X:X=U_X\\
+f_Y:Y=\frac{X}{3}+U_Y\\
 f_Z:Z=\frac{Y}{16}+U_Z
+\end{aligned}
 $$
 
 
