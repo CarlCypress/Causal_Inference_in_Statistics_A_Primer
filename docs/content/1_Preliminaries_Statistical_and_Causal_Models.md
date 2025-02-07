@@ -930,7 +930,7 @@ $$
 
 $$
 \begin{aligned}
-U=\{X,Y\},V=\{Z\},F=\{f_Z\}\\
+U=\{X,Y\},\quad V=\{Z\},\quad F=\{f_Z\}\\
 f_Z:Z=2X+3Y
 \end{aligned}
 $$
@@ -952,7 +952,7 @@ $$
 
 $$
 \begin{aligned}
-V=\{身高,性别,成绩\},U=\{U_1,U_2,U_3\},F=\{f_1,f_2\}\\
+V=\{身高,性别,成绩\},\quad U=\{U_1,U_2,U_3\},\quad F=\{f_1,f_2\}\\
 性别=U_1\\
 身高=f_1(性别,U_2)\\
 成绩=f_2(身高,性别,U_3)
@@ -976,7 +976,7 @@ $$
 
 $$
 \begin{aligned}
-V=\{X,Y,Z\},U={U_X,U_Y,U_Z},F={f_X,f_Y,f_Z}\\
+V=\{X,Y,Z\},\quad U={U_X,U_Y,U_Z},\quad F={f_X,f_Y,f_Z}\\
 f_X:X=U_X\\
 f_Y:Y=\frac{X}{3}+U_Y\\
 f_Z:Z=\frac{Y}{16}+U_Z
