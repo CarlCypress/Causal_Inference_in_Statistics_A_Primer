@@ -975,11 +975,8 @@ $$
 
 
 $$
-V=\{X,Y,Z\},U={U_X,U_Y,U_Z},F={f_X,f_Y,f_Z}
-$$
-
-$$
 \begin{aligned}
+V=\{X,Y,Z\},U={U_X,U_Y,U_Z},F={f_X,f_Y,f_Z}\\
 f_X:X=U_X\\
 f_Y:Y=\frac{X}{3}+U_Y\\
 f_Z:Z=\frac{Y}{16}+U_Z
