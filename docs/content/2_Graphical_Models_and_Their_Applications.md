@@ -188,7 +188,7 @@ f_Z:Z&=
 $$
 
 
-![fig_2.2](/Users/huangdenan/github/personal_github/Causal_Inference_in_Statistics_A_Primer/docs/images/fig_2.2.png)
+![fig_2.2](../images/fig_2.2.png)
 
 如果假设误差项 $U_X,U_Y$ 和 $U_Z$ 是相互独立的，那么通过检测图2.2中的图模型，可以确定SCM 2.2.5和SCM 2.2.6共享如下的依赖性和独立性。
 
