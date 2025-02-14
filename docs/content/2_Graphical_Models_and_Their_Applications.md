@@ -17,6 +17,7 @@
 **SCM 2.2.1（高中学费、SAT平均分和大学录取率）**
 
 
+
 $$
 \begin{aligned}
 V=\{X,Y,Z\},U=\{U_X,U_Y,U_Z\},F=\{f_X,f_Y,f_Z\}\\
@@ -27,32 +28,30 @@ f_Z:Z=\frac{Y}{16}+U_Z
 $$
 
 
+
 **SCM 2.2.2（开灯、电路和灯泡状态）**
 
 
 $$
 \begin{aligned}
-V=\{X,Y,Z\},U=\{U_X,U_Y,U_Z\},F=\{f_X,f_Y,f_Z\}\\
-f_X:X=U_X\\
-f_Y:Y=
-\left\{
-\begin{array}{ll}
-\text{关} & \text{当(X="打开"且 $U_Y=0$ )或(X="合上"且 $U_Y=1$ )}\\
+V &= \{X,Y,Z\}, U = \{U_X, U_Y, U_Z\}, F = \{f_X, f_Y, f_Z\} \\
+f_X: X &= U_X \\
+f_Y: Y &= 
+\begin{cases}
+\text{关} & \text{当}(\text{X="打开"且} U_Y = 0) \text{或}(\text{X = "合上"且} U_Y = 1) \\
 \text{开} & \text{否则}
-\end{array}
-\right.\\
-f_Z:Z=
-\left\{
-\begin{array}{ll}
-\text{亮} & \text{当(Y="关"且 $U_Z=0$ )或(Y="开"且 $U_Z=1$ )}\\
+\end{cases} \\
+f_Z: Z &= 
+\begin{cases}
+\text{亮} & \text{当}(\text{Y="关"且} U_Z = 0) \text{或}(\text{Y="开"且} U_Z = 1) \\
 \text{灭} & \text{否则}
-\end{array}
-\right.\\
+\end{cases} \\
 \end{aligned}
 $$
 
 
 **SCM 2.2.3（工作时间、训练时间和比赛完成时间）**
+
 
 
 $$
@@ -63,6 +62,7 @@ f_Y:Y=84-x+U_Y\\
 f_Z:Z=\frac{100}{y}+U_Z
 \end{aligned}
 $$
+
 
 
 SCM2.2.1-SCM2.2.3共享如图2.1所示的图模型。
