@@ -426,9 +426,187 @@ $$
 
 ![fig_3.10](../images/fig_3.10.png)
 
-描述该案列的图模型如图3.10(a)所示。该模型不符合后门准则，因为变量 $U$ 是为观测到的，因此不能阻断从 $X$ 到 $Y$ 的后门路径。吸烟对肺癌的因果效应在这个模型中是不可识别的；人们永远都不能确定 $X$ 和 $Y$ 之间观察到的相关性中哪一部分是虚假的，即可归因为他们的共同效应 $U$ ，哪一部分是真正的原因。然而，我们观察到，即使在这种情况下，为了完全解释 $X$ 和 $Y$ 之间观察到的关联关系，对于 $U$ 和 $X$ 以及 $U$ 和 $Y$ 之间的(未观测的)关联性所必须达到的量化强度，人们还是做了很多令人信服的研究。
+描述该案列的图模型如图3.10(a)所示。该模型不符合后门准则，因为变量 $U$ 是未观测到的，因此不能阻断从 $X$ 到 $Y$ 的后门路径。吸烟对肺癌的因果效应在这个模型中是不可识别的；人们永远都不能确定 $X$ 和 $Y$ 之间观察到的相关性中哪一部分是虚假的，即可归因为他们的共同效应 $U$ ，哪一部分是真正的原因。然而，我们观察到，即使在这种情况下，为了完全解释 $X$ 和 $Y$ 之间观察到的关联关系，对于 $U$ 和 $X$ 以及 $U$ 和 $Y$ 之间的(未观测的)关联性所必须达到的量化强度，人们还是做了很多令人信服的研究。
 
-通过思考图3.10(b)所示的图模型来做更深层的探究。 
+通过思考如图 3.10(b)所示的图模型来做更深层的探究。在图 3.10(b)中，有一个额外的可观测的变量：患者肺部焦油的含量。这个模型不满足后门则，因为仍然没有变量能够阻断 $X \leftarrow U \rightarrow Y$ 这条协路径。然而，我们发现在这个模型中，因果效应 $P(Y=y\mid do(X=x))$ 可以通过连续两次应用后门准则来识别。
+
+如何通过中介变量 $Z$ 来评估 $X$ 对 $Y$ 的因果效应呢？该问题的回答绝不是无关紧要的，正如下述量化的例子所示，它可能会引发极大的争议。
+
+假设有一个严谨的研究，该研究中随机选择了 80 万名受试者来同时测量以下因素。这些受试者被认为具有非常高的癌症风险（由于吸烟、石棉、氮等环境暴露因素）。
+
+1. 受试者是否吸烟。
+2. 受试者肺重的焦油量。
+3. 受试者是否被检测到肺癌。
+
+表3.1展示了本研究的数据。为简单起见，假定三个变量为布尔型变量。
+
+表 3.1 一个样本随机选择的假设数据集
+
+<table border=0 cellpadding=0 cellspacing=0 width=696 style='border-collapse:
+ collapse;table-layout:fixed;width:520pt'>
+ <col width=87 span=8 style='width:65pt'>
+ <tr height=21 style='height:16.0pt'>
+  <td colspan=2 rowspan=3 height=63 class=xl65 width=174 style='height:48.0pt;
+  width:130pt'>患病情况</td>
+  <td colspan=2 class=xl65 width=174 style='width:130pt'>有焦油</td>
+  <td colspan=2 class=xl65 width=174 style='width:130pt'>无焦油</td>
+  <td colspan=2 class=xl65 width=174 style='width:130pt'>合计</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl63 style='height:16.0pt'>吸烟者</td>
+  <td class=xl63>不吸烟者</td>
+  <td class=xl63>吸烟者</td>
+  <td class=xl63>不吸烟者</td>
+  <td class=xl63>吸烟者</td>
+  <td class=xl63>不吸烟者</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl64 style='height:16.0pt'><span lang=EN-US>380</span></td>
+  <td class=xl64><span lang=EN-US>20</span></td>
+  <td class=xl64><span lang=EN-US>20</span></td>
+  <td class=xl64><span lang=EN-US>380</span></td>
+  <td class=xl64><span lang=EN-US>400</span></td>
+  <td class=xl64><span lang=EN-US>400</span></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td rowspan=2 height=42 class=xl65 style='height:32.0pt'>无癌症</td>
+  <td class=xl63>人数</td>
+  <td class=xl64><span lang=EN-US>323</span></td>
+  <td class=xl64><span lang=EN-US>1</span></td>
+  <td class=xl64><span lang=EN-US>18</span></td>
+  <td class=xl64><span lang=EN-US>38</span></td>
+  <td class=xl64><span lang=EN-US>341</span></td>
+  <td class=xl64><span lang=EN-US>39</span></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl63 style='height:16.0pt'>比例/%</td>
+  <td class=xl64><span lang=EN-US>85</span></td>
+  <td class=xl64><span lang=EN-US>5</span></td>
+  <td class=xl64><span lang=EN-US>90</span></td>
+  <td class=xl64><span lang=EN-US>10</span></td>
+  <td class=xl64><span lang=EN-US>85.25</span></td>
+  <td class=xl64><span lang=EN-US>9.75</span></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td rowspan=2 height=42 class=xl65 style='height:32.0pt'>患癌症</td>
+  <td class=xl63>人数</td>
+  <td class=xl64><span lang=EN-US>57</span></td>
+  <td class=xl64><span lang=EN-US>19</span></td>
+  <td class=xl64><span lang=EN-US>2</span></td>
+  <td class=xl64><span lang=EN-US>342</span></td>
+  <td class=xl64><span lang=EN-US>59</span></td>
+  <td class=xl64><span lang=EN-US>361</span></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl63 style='height:16.0pt'>比例/%</td>
+  <td class=xl64><span lang=EN-US>15</span></td>
+  <td class=xl64><span lang=EN-US>95</span></td>
+  <td class=xl64><span lang=EN-US>10</span></td>
+  <td class=xl64><span lang=EN-US>90</span></td>
+  <td class=xl64><span lang=EN-US>14.75</span></td>
+  <td class=xl64><span lang=EN-US>90.25</span></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+从这些数据中可以得出两个相反的结论。烟草业辩称该表证明了吸烟的有益效果。他们指出，只有 14.75% 的吸烟者得了肺癌，而不吸烟者为 90.25%。此外，在有焦油和无焦油两个分组中，吸烟者比不吸烟者显示出了更低的癌症患病比例。这些数字显然与经验观察相反，但这也正好说明了我们的观点：观察是不可信的。
+
+然而，反对吸烟者则辩称该表讲述了一个完全不同的故事，即吸烟确实增加而不是降低了一个人的肺癌风险。他们的论点是：如果你选择吸烟，那么你有 95%（380/400）的概率出现焦油沉积；如果选择不抽烟，则概率仅为 5%（20/400）。为了评估焦油沉积对肺癌的影响，对样本重新分组为吸烟者和不吸烟者两组，如表 3.2 所示。
+
+表3.2 重新组织表 3.1 的数据，展示了每个吸烟-焦油分组中的癌症比例
+
+<table border=0 cellpadding=0 cellspacing=0 width=696 style='border-collapse:
+ collapse;table-layout:fixed;width:520pt'>
+ <col width=87 span=8 style='width:65pt'>
+ <tr height=21 style='height:16.0pt'>
+  <td colspan=2 rowspan=3 height=63 class=xl63 width=174 style='height:48.0pt;
+  width:130pt'>患病情况</td>
+  <td colspan=2 class=xl63 width=174 style='width:130pt'>吸烟者</td>
+  <td colspan=2 class=xl63 width=174 style='width:130pt'>不吸烟者</td>
+  <td colspan=2 class=xl63 width=174 style='width:130pt'>合计</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 style='height:16.0pt'>有焦油</td>
+  <td>无焦油</td>
+  <td>有焦油</td>
+  <td>无焦油</td>
+  <td>有焦油</td>
+  <td>无焦油</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 align=right style='height:16.0pt'>380</td>
+  <td align=right>20</td>
+  <td align=right>20</td>
+  <td align=right>380</td>
+  <td align=right>400</td>
+  <td align=right>400</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td rowspan=2 height=42 class=xl63 style='height:32.0pt'>无癌症</td>
+  <td>人数</td>
+  <td align=right>323</td>
+  <td align=right>18</td>
+  <td align=right>1</td>
+  <td align=right>38</td>
+  <td align=right>424</td>
+  <td align=right>56</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 style='height:16.0pt'>比例/%</td>
+  <td align=right>85</td>
+  <td align=right>90</td>
+  <td align=right>5</td>
+  <td align=right>10</td>
+  <td align=right>81</td>
+  <td align=right>14</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td rowspan=2 height=42 class=xl63 style='height:32.0pt'>患癌症</td>
+  <td>人数</td>
+  <td align=right>57</td>
+  <td align=right>2</td>
+  <td align=right>19</td>
+  <td align=right>342</td>
+  <td align=right>76</td>
+  <td align=right>344</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 style='height:16.0pt'>比例/%</td>
+  <td align=right>15</td>
+  <td align=right>10</td>
+  <td align=right>95</td>
+  <td align=right>90</td>
+  <td align=right>19</td>
+  <td align=right>86</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+  <td width=87 style='width:65pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+
+
+
 
 
 
