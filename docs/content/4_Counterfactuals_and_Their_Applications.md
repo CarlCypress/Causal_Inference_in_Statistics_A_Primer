@@ -294,7 +294,3 @@ E(Y\mid do(X=1),Z=1)\neq E(Y_{X=1}\mid Z=1)\tag{4.8}
 $$
 
 
-
-
-
-
