@@ -941,3 +941,45 @@ $$
 P(x,y)=\frac{2}{2000}=0.001\tag{4.38}
 $$
 
+$$
+P(y\mid x)=\frac{2}{1000}=0.002\tag{4.39}
+$$
+
+$$
+P(y\mid x')=\frac{28}{1000}=0.028\tag{4.40}
+$$
+
+表4.5 用于说明估计PN所使用的实验数据和非实验数据
+
+<table align="center">
+  <tr>
+    <th align="center" rowspan="2"></th>
+    <th align="center" colspan="2">实验数据</th>
+    <th align="center" colspan="2">非实验数据</th>
+  </tr>
+  <tr>
+    <th align="center">do(x)</th>
+    <th align="center">do(x')</th>
+    <th align="center">x</th>
+    <th align="center">x'</th>
+  </tr>
+  <tr>
+    <td align="center">死亡 (y)</td>
+    <td align="center">16</td>
+    <td align="center">14</td>
+    <td align="center">2</td>
+    <td align="center">28</td>
+  </tr>
+  <tr>
+    <td align="center">存活 (y')</td>
+    <td align="center">984</td>
+    <td align="center">986</td>
+    <td align="center">998</td>
+    <td align="center">972</td>
+  </tr>
+</table>
+
+
+
+
+
