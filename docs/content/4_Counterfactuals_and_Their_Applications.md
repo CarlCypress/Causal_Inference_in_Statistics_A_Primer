@@ -1103,10 +1103,10 @@ A-4： $\{T,M\}$ 对 $Y$ 的 W-特定因果效应可识别（使用试验或者�
 
 $$
 \begin{aligned}
-NDE=&\sum
+NDE=&\sum_m\sum_w[E[Y\mid do(T=1,M=m),W=w]-E[Y\mid do(T=0,M=m), W=w]]\\
+&\times P(M=m\mid do(T=0),W=w)P(W=w)
 \end{aligned}\tag{4.49}
 $$
-
 
 
 
