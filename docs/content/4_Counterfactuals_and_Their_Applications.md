@@ -1123,16 +1123,13 @@ NDE=&\sum_m\sum_w[E[Y\mid T=1,M=m,W=w]-E[Y\mid T=0,M=m,W=w]]\\
 \end{aligned}\tag{4.50}
 $$
 
-
 在非混杂的情况下（图 4.6(a)），NDE 简化为
 
 
-$$
-\begin{aligned}
-NDE
-\end{aligned}\tag{4.51}
-$$
 
+$$
+NDE=\sum_m[E[Y\mid T=1, M=m] - E[Y\mid T=0,M=m]]P(M=m\mid T=0)\tag{4.51}
+$$
 
 
 
