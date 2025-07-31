@@ -1136,12 +1136,14 @@ $$
 同样地，使用式（4.48），且 $TE=E(Y\mid T=1)-E(Y\mid T=0)$ ，NIE变为
 
 
+
 $$
 NIE=\sum_mE[Y\mid T=0,M=m][P(M=m\mid T=1)-P(M=m\mid T=0)]\tag{4.52}
 $$
 
 
 
+最后两个表达式被称为中介公式，我们看到，虽然NDE是CDE的加权平均，但这样的解释不能应用于NIE。
 
 
 
