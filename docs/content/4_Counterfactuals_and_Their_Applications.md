@@ -1234,6 +1234,19 @@ $$
 （a）使用自然因果效应时基本定文（式（4.46）和式（4.47）（将 $M$ 看作中介变量），来确定中介变量是必要因果效应（TE-NDE）的比例，以及中介变量是充分因果效应（NIE）的比例。[提示：证明以下各式。]
 
 
+$$
+NDE=\beta_2+\alpha\beta_4\tag{4.58}
+$$
+
+$$
+NIE=\beta_1(\gamma_1+\alpha\gamma_2)\tag{4.59}
+$$
+
+$$
+TE=\beta_2+(\gamma_1+\alpha\gamma_2)(\beta_3+\beta_1)+\alpha\beta_4\tag{4.60}
+$$
+
+
 
 
 
