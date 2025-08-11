@@ -1246,7 +1246,11 @@ $$
 TE=\beta_2+(\gamma_1+\alpha\gamma_2)(\beta_3+\beta_1)+\alpha\beta_4\tag{4.60}
 $$
 
+$$
+TE-NDE=(\beta_1+\beta_3)(\gamma_1+\alpha\beta_2)\tag{4.61}
+$$
 
+（b）使用 $W$ 作为中介变量，重新回答问题（a）。
 
 
 
