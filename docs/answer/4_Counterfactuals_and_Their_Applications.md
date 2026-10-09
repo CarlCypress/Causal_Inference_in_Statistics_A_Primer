@@ -22,7 +22,7 @@
 **解：** 干预后的结构结果是 $Y_x=abx+bU_2$。由于
 
 $$
-\operatorname{Var}(Z)=1+a^2,\qquad \operatorname{Cov}(U_2,Z)=1,
+\mathrm{Var}(Z)=1+a^2,\qquad \mathrm{Cov}(U_2,Z)=1,
 $$
 
 高斯条件期望给出 $E(U_2\mid Z=z)=z/(1+a^2)$，因此
@@ -234,15 +234,15 @@ $$
 令 $s=P(X=1,Y=1)>0$。式 (4.30) 给出
 
 $$
-\max\left\{0,\frac{P(Y=1)-P(Y_0=1)}s\right\}
+\max\left(0,\frac{P(Y=1)-P(Y_0=1)}s\right)
 \le PN\le
-\min\left\{1,\frac{P(Y_0=0)-P(X=0,Y=0)}s\right\},
+\min\left(1,\frac{P(Y_0=0)-P(X=0,Y=0)}s\right),
 $$
 
 即
 
 $$
-\frac{0.09}{s}\le PN\le\min\left\{1,\frac{0.18}{s}\right\}.
+\frac{0.09}{s}\le PN\le\min\left(1,\frac{0.18}{s}\right).
 $$
 
 题目没有给出放疗选择率，所以 $s$ 未确定。由 $s\le P(Y=1)=0.70$，至少可得

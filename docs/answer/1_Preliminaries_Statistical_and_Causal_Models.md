@@ -196,14 +196,14 @@ $$
 **解：** 若二阶矩存在，独立性给出 $E(XY)=E(X)E(Y)$，因此
 
 $$
-\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)=0.
+\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)=0.
 $$
 
-在两变量方差均大于零时，$\rho_{XY}=\operatorname{Cov}(X,Y)/(\sigma_X\sigma_Y)=0$。若某变量方差为零，相关系数未定义，不能直接称为零。
+在两变量方差均大于零时，$\rho_{XY}=\mathrm{Cov}(X,Y)/(\sigma_X\sigma_Y)=0$。若某变量方差为零，相关系数未定义，不能直接称为零。
 
 (b) 举出相关系数为零但不独立的例子。
 
-**解：** 令 $X$ 在 $\{-1,0,1\}$ 上均匀分布，$Y=X^2$。则 $Y$ 完全由 $X$ 决定，二者显然不独立；但 $E(X)=E(XY)=0$，所以协方差为零。又有 $\operatorname{Var}(X)=2/3$、$\operatorname{Var}(Y)=2/9$，故相关系数为零。这个例子的概率分布已归一化；参考手册此问给出的概率表有列和不为 1 的问题。
+**解：** 令 $X$ 在 $\{-1,0,1\}$ 上均匀分布，$Y=X^2$。则 $Y$ 完全由 $X$ 决定，二者显然不独立；但 $E(X)=E(XY)=0$，所以协方差为零。又有 $\mathrm{Var}(X)=2/3$、$\mathrm{Var}(Y)=2/9$，故相关系数为零。这个例子的概率分布已归一化；参考手册此问给出的概率表有列和不为 1 的问题。
 
 #### 1.3.7
 
@@ -251,9 +251,9 @@ E(X\mid Y=0)=1,\quad E(X\mid Y=1)=\frac12.
 $$
 
 $$
-\operatorname{Var}(X)=\frac{3}{16},\qquad
-\operatorname{Var}(Y)=\frac14,\qquad
-\operatorname{Cov}(X,Y)=\frac14-\frac34\frac12=-\frac18.
+\mathrm{Var}(X)=\frac{3}{16},\qquad
+\mathrm{Var}(Y)=\frac14,\qquad
+\mathrm{Cov}(X,Y)=\frac14-\frac34\frac12=-\frac18.
 $$
 
 $$
@@ -292,10 +292,10 @@ E(X\mid Y=y)=E(Z\mid Y=y)=\frac y2\quad(y=2,\ldots,12).
 $$
 
 $$
-\operatorname{Var}(X)=\operatorname{Var}(Z)=\frac{35}{12},\quad
-\operatorname{Var}(Y)=\frac{35}{6},\quad
-\operatorname{Cov}(X,Y)=\frac{35}{12},\quad
-\operatorname{Cov}(X,Z)=0,\quad \rho_{XY}=\frac1{\sqrt2}.
+\mathrm{Var}(X)=\mathrm{Var}(Z)=\frac{35}{12},\quad
+\mathrm{Var}(Y)=\frac{35}{6},\quad
+\mathrm{Cov}(X,Y)=\frac{35}{12},\quad
+\mathrm{Cov}(X,Z)=0,\quad \rho_{XY}=\frac1{\sqrt2}.
 $$
 
 (b) 根据表 1.6 的 12 次投掷，求上述量的样本估计。
@@ -319,10 +319,10 @@ $$
 
 | 统计量 | 经验分布估计（分母 $n=12$） | 无偏估计（分母 $n-1=11$） |
 | --- | --- | --- |
-| $\operatorname{Var}(X)$ | $43/18\approx2.38889$ | $86/33\approx2.60606$ |
-| $\operatorname{Var}(Y)$ | $7/4=1.75$ | $21/11\approx1.90909$ |
-| $\operatorname{Cov}(X,Y)$ | $17/12\approx1.41667$ | $17/11\approx1.54545$ |
-| $\operatorname{Cov}(X,Z)$ | $-35/36\approx-0.97222$ | $-35/33\approx-1.06061$ |
+| $\mathrm{Var}(X)$ | $43/18\approx2.38889$ | $86/33\approx2.60606$ |
+| $\mathrm{Var}(Y)$ | $7/4=1.75$ | $21/11\approx1.90909$ |
+| $\mathrm{Cov}(X,Y)$ | $17/12\approx1.41667$ | $17/11\approx1.54545$ |
+| $\mathrm{Cov}(X,Z)$ | $-35/36\approx-0.97222$ | $-35/33\approx-1.06061$ |
 
 只要方差和协方差统一采用同一分母，样本相关系数均为
 
@@ -368,7 +368,7 @@ $$
 
 $$
 b=\frac{E(XY)-E(X)E(Y)}{E(X^2)-E(X)^2}
-=\frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(X)}.
+=\frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)}.
 $$
 
 这里的回归直线不要求每个观测都严格满足 $Y=a+bX$。
@@ -442,7 +442,7 @@ $$
 
 (e) 进一步假设各外生变量服从独立标准正态分布。
 
-**解：** (i) $\operatorname{Cov}(X,Y)=1/3$、$\operatorname{Var}(Y)=10/9$。由高斯条件期望，
+**解：** (i) $\mathrm{Cov}(X,Y)=1/3$、$\mathrm{Var}(Y)=10/9$。由高斯条件期望，
 
 $$
 E(X\mid Y=2)=\frac{1/3}{10/9}\times2=\frac35.
