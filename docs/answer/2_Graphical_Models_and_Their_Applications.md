@@ -1,6 +1,6 @@
 ## 2. 图模型及其应用
 
-本章按[正文](../content/2_Graphical_Models_and_Their_Applications.md)的题号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对。图示使用 HTML 表格绘制。以下独立性结论假定外生误差相互独立；回归结论按本书的线性模型理解。
+本章按[正文](../content/2_Graphical_Models_and_Their_Applications.md)的题号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制。以下独立性结论假定外生误差相互独立；回归结论按本书的线性模型理解。
 
 **注：** d-分离保证相应的条件独立；d-连通只表示图不保证独立，特殊参数仍可能使关联消失。讨论由观测数据确定箭头方向时，另需因果马尔可夫性、忠实性及图中没有遗漏共同原因等假设。
 
@@ -8,19 +8,9 @@
 
 根据图 2.5 和图 2.6，求条件独立关系与零回归系数。
 
-<!-- diagram:fig25 -->
-<table>
-<caption>图 2.5：T 是对撞节点</caption>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">R</td><td align="center">→</td><td align="center">S</td><td align="center">→</td><td align="center">T</td><td align="center">←</td><td align="center">U</td><td align="center">←</td><td align="center">V</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+![fig_2.5](../images/fig_2.5.png)
 
-<!-- diagram:fig26 -->
-<table>
-<caption>图 2.6：P 是对撞节点 T 的后代</caption>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">R</td><td align="center">→</td><td align="center">S</td><td align="center">→</td><td align="center">T</td><td align="center">←</td><td align="center">U</td><td align="center">←</td><td align="center">V</td><td align="center">→</td><td align="center">Y</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">P</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-</table>
+![fig_2.6](../images/fig_2.6.png)
 
 (a) 图 2.5 中，给定 $\{R,V\}$，哪些变量对独立？
 
@@ -94,15 +84,7 @@ $$
 
 图 2.9 的外生误差均独立。根据图求分离集合、马尔可夫毯与预测变量集合。
 
-<!-- diagram:fig29 -->
-<table>
-<caption>图 2.9：误差项相互独立</caption>
-  <tr><td align="center">Z<sub>1</sub></td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">Z<sub>2</sub></td></tr>
-  <tr><td align="center">↓</td><td align="center">↘</td><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">↓</td></tr>
-  <tr><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">Z<sub>3</sub></td><td align="center">&nbsp;</td><td align="center">↓</td></tr>
-  <tr><td align="center">↓</td><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td><td align="center">↓</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">W</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+![fig_2.9](../images/fig_2.9.png)
 
 图中的边为 $Z_1\to Z_3$、$Z_2\to Z_3$、$Z_1\to X$、$Z_3\to X$、$Z_2\to Y$、$Z_3\to Y$、$X\to W$、$W\to Y$。
 

@@ -1,6 +1,6 @@
 ## 3. 干预的效果
 
-本章按[正文](../content/3_The_Effects_of_Interventions.md)整理中文解答，并补入正文遗漏的习题 3.8.1。参考核对：[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)。图示均由 HTML 绘制；同名节点表示同一变量。
+本章按[正文](../content/3_The_Effects_of_Interventions.md)整理中文解答，并补入正文遗漏的习题 3.8.1。参考核对：[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制，同名节点表示同一变量。
 
 #### 3.2.1
 
@@ -10,13 +10,9 @@
 
 **解：** 干预替换 $X$ 的赋值机制，删除 $Z\to X$，保留 $Z$ 的分布和 $Y$ 的机制：
 
-<!-- diagram:syndrome_do -->
-<table>
-<caption>干预 do(X=x)：删除 Z 到 X 的边</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">Z</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">↓</td></tr>
-  <tr><td align="center">X=x</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+干预后的结构与图 3.4 相同；本题的 $Z$ 表示症状：
+
+![fig_3.4](../images/fig_3.4.png)
 
 因此 $P_x(z,y)=P(z)P(y\mid x,z)$，对 $z$ 求和可得：
 
@@ -74,15 +70,7 @@ $$
 
 根据图 3.8，求后门调整集合。
 
-<!-- diagram:fig38 -->
-<table>
-<caption>图 3.8：后门调整与前门识别</caption>
-  <tr><td align="center">B</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">C</td></tr>
-  <tr><td align="center">↓</td><td align="center">↘</td><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">↓</td></tr>
-  <tr><td align="center">A</td><td align="center">&nbsp;</td><td align="center">Z</td><td align="center">&nbsp;</td><td align="center">D</td></tr>
-  <tr><td align="center">↓</td><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td><td align="center">↓</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">W</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+![fig_3.8](../images/fig_3.8.png)
 
 (a) 列出识别 $X$ 对 $Y$ 总效应的所有后门集合。
 
@@ -161,14 +149,7 @@ $$
 
 **解：** 仍令 $X$ 为治疗、$Z$ 为棒棒糖、$Y$ 为康复，$U_1$ 为分配因素、$U_2$ 为健康因素。
 
-<!-- diagram:lollipop -->
-<table>
-<caption>棒棒糖 Z 是对撞节点</caption>
-  <tr><td align="center">U<sub>1</sub></td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">U<sub>2</sub></td></tr>
-  <tr><td align="center">↓</td><td align="center">↘</td><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">↓</td></tr>
-  <tr><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">Z：棒棒糖</td><td align="center">&nbsp;</td><td align="center">↓</td></tr>
-  <tr><td align="center">X：治疗</td><td align="center">→</td><td align="center">→</td><td align="center">→</td><td align="center">Y：康复</td></tr>
-</table>
+<img src="../images/fig_1.2.4.png" width="500px" alt="fig_1.2.4">
 
 (b) 后门准则要求调整哪些变量？
 
@@ -206,13 +187,9 @@ $W$ 截断 $X$ 到 $Y$ 的全部有向路径；$X$ 到 $W$ 没有开放后门路
 
 **解：** 令 $X$ 为药物新旧或价格，$Z$ 为有效成分高低，$Y$ 为康复，$U$ 为影响购买选择和康复的未观测因素。
 
-<!-- diagram:frontdoor -->
-<table>
-<caption>U 是 X 与 Y 的未观测共同原因；Z 截断全部有向路径</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">U</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">Z</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+沿用图 3.10(b) 的前门结构；图中的吸烟、焦油、肺癌，在本题中分别换成药物新旧、有效成分、康复：
+
+![fig_3.10](../images/fig_3.10.png)
 
 购买选择可以受到 $U$ 的混杂影响，但 $X$ 到 $Y$ 没有绕过有效成分 $Z$ 的直接因果路径。
 

@@ -1,6 +1,6 @@
 ## 4. 反事实及其应用
 
-本章按[正文](../content/4_Counterfactuals_and_Their_Applications.md)的习题编号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对。图示使用 HTML 绘制。
+本章按[正文](../content/4_Counterfactuals_and_Their_Applications.md)的习题编号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制。
 
 正文与所给手册的两个题号不同，对应关系为：
 
@@ -15,13 +15,7 @@
 
 设 $X=U_1$、$Z=aX+U_2$、$Y=bZ$，$U_1,U_2$ 为相互独立的标准正态变量。$X,Z,Y$ 分别表示教育、技能、薪资。
 
-<!-- diagram:college -->
-<table>
-<caption>教育、技能与薪资的结构模型</caption>
-  <tr><td align="center">U<sub>1</sub></td><td align="center">&nbsp;</td><td align="center">U<sub>2</sub></td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">X：教育</td><td align="center">→ a</td><td align="center">Z：技能</td><td align="center">→ b</td><td align="center">Y：薪资</td></tr>
-</table>
+![fig_4.3](../images/fig_4.3.png)
 
 (a) 对当前技能为 $Z=z$ 的人，求他们当初接受 $x$ 年教育时的期望薪资。
 
@@ -53,12 +47,7 @@ $$
 
 (a) 如何用非实验数据估计图 4.1 的 $a,b,c$？
 
-<!-- diagram:homework -->
-<table>
-<caption>鼓励通过直接路径和家庭作业路径影响成绩</caption>
-  <tr><td align="center">X：鼓励</td><td align="center">→ a</td><td align="center">H：作业</td><td align="center">→ c</td><td align="center">Y：成绩</td></tr>
-  <tr><td align="center">X：鼓励</td><td align="center">→ b</td><td align="center">→</td><td align="center">→</td><td align="center">Y：成绩</td></tr>
-</table>
+![fig_4.1](../images/fig_4.1.png)
 
 **解：** 假定图中独立误差的线性结构正确，$H=aX+U_H$、$Y=bX+cH+U_Y$。先回归 $H$ 对 $X$，再回归 $Y$ 对 $X,H$：
 
@@ -187,13 +176,9 @@ $$
 
 **解：** 令 $Z$ 为焦油沉积，$U$ 为影响吸烟和肺癌的未测共同原因：
 
-<!-- diagram:frontdoor -->
-<table>
-<caption>U 是 X 与 Y 的未观测共同原因；Z 截断全部有向路径</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">U</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">Z</td><td align="center">→</td><td align="center">Y</td></tr>
-</table>
+使用图 3.10(b) 的前门模型：
+
+![fig_3.10](../images/fig_3.10.png)
 
 原始计数为：
 

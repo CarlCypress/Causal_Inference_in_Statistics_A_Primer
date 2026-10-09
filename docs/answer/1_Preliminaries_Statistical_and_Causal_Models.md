@@ -1,6 +1,6 @@
 ## 1. 引言：统计和因果模型
 
-本章按[正文](../content/1_Preliminaries_Statistical_and_Causal_Models.md)的题号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对题目和结果。解答采用独立的中文表述；手册或原答案中的计算、排版问题在相关题目中注明。图示均由 HTML 表格中的节点和箭头绘制。
+本章按[正文](../content/1_Preliminaries_Statistical_and_Causal_Models.md)的题号整理中文解答，并以[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)核对题目和结果。解答采用独立的中文表述；手册或原答案中的计算、排版问题在相关题目中注明。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制。
 
 #### 1.2.1
 
@@ -40,13 +40,7 @@
 
 **解：** 应按治疗前的结石大小比较。结石大小同时影响治疗选择和康复机会，是混杂变量。
 
-<!-- diagram:stone -->
-<table>
-<caption>结石大小是治疗选择和康复的共同原因</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">结石大小</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td></tr>
-  <tr><td align="center">治疗方案</td><td align="center">→</td><td align="center">康复</td></tr>
-</table>
+<img src="../images/fig_1.2.3.1.png" width="500px" alt="fig_1.2.3.1">
 
 不知道自己的结石大小，并不会使混杂消失。估计目标人群的平均效果时，应把各大小组的治疗效果按同一组人群权重汇总。
 
@@ -54,13 +48,7 @@
 
 **解：** 应分别比较简单、复杂手术的成功率，再按目标患者的难度分布加权。手术难度同时影响医生选择和成功率，直接比较总体成功率会把病例构成差异混入医生的效果。
 
-<!-- diagram:surgery -->
-<table>
-<caption>按病例难度比较医生</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">手术难度</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td></tr>
-  <tr><td align="center">医生选择</td><td align="center">→</td><td align="center">成功</td></tr>
-</table>
+<img src="../images/fig_1.2.3.2.png" width="500px" alt="fig_1.2.3.2">
 
 #### 1.2.4
 
@@ -78,14 +66,7 @@
 
 **解：** 令 $X$ 为接受治疗，$Z$ 为领取棒棒糖，$Y$ 为康复；$U_1$ 表示分配病房等因素，$U_2$ 表示影响抑郁表现和康复的健康因素。
 
-<!-- diagram:lollipop -->
-<table>
-<caption>棒棒糖 Z 是对撞节点</caption>
-  <tr><td align="center">U<sub>1</sub></td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">U<sub>2</sub></td></tr>
-  <tr><td align="center">↓</td><td align="center">↘</td><td align="center">&nbsp;</td><td align="center">↙</td><td align="center">↓</td></tr>
-  <tr><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">Z：棒棒糖</td><td align="center">&nbsp;</td><td align="center">↓</td></tr>
-  <tr><td align="center">X：治疗</td><td align="center">→</td><td align="center">→</td><td align="center">→</td><td align="center">Y：康复</td></tr>
-</table>
+<img src="../images/fig_1.2.4.png" width="500px" alt="fig_1.2.4">
 
 这里的边为 $U_1\to X$、$U_1\to Z$、$U_2\to Z$、$U_2\to Y$ 和 $X\to Y$；没有 $Z\to Y$。
 
@@ -407,15 +388,7 @@ $$
 
 根据图 1.8，求父节点、祖先、子节点、后代和路径。
 
-<!-- diagram:fig18 -->
-<table>
-<caption>图 1.8：有向图</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">W</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">↗</td><td align="center">↓</td><td align="center">↘</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">Y</td><td align="center">→</td><td align="center">Z</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">↘</td><td align="center">&nbsp;</td><td align="center">↙</td></tr>
-  <tr><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">T</td><td align="center">&nbsp;</td></tr>
-</table>
+![fig_1.8](../images/fig_1.8.png)
 
 **解：**
 
@@ -451,13 +424,9 @@ $$
 
 **解：**
 
-<!-- diagram:scm151 -->
-<table>
-<caption>独立外生变量驱动的链</caption>
-  <tr><td align="center">U<sub>X</sub></td><td align="center">&nbsp;</td><td align="center">U<sub>Y</sub></td><td align="center">&nbsp;</td><td align="center">U<sub>Z</sub></td></tr>
-  <tr><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">↓</td><td align="center">&nbsp;</td><td align="center">↓</td></tr>
-  <tr><td align="center">X</td><td align="center">→</td><td align="center">Y</td><td align="center">→</td><td align="center">Z</td></tr>
-</table>
+模型结构与图 2.1 相同：
+
+![fig_2.1](../images/fig_2.1.png)
 
 (b) 观察到 $Y=3$，求 $Z$ 的条件期望。
 
@@ -493,13 +462,7 @@ $$
 
 令 $Z=1$ 表示有症状，$X=1$ 表示服药，$Y=1$ 表示死亡。设 $P(Z=1)=r$，$P(X=1\mid Z=0)=q_1$、$P(X=1\mid Z=1)=q_2$；四个死亡概率依次为 $p_1=P(Y=1\mid0,0)$、$p_2=P(Y=1\mid1,0)$、$p_3=P(Y=1\mid0,1)$、$p_4=P(Y=1\mid1,1)$，条件中的顺序为 $X,Z$。
 
-<!-- diagram:syndrome -->
-<table>
-<caption>症状影响服药与死亡</caption>
-  <tr><td align="center">&nbsp;</td><td align="center">Z：症状</td><td align="center">&nbsp;</td></tr>
-  <tr><td align="center">↙</td><td align="center">&nbsp;</td><td align="center">↘</td></tr>
-  <tr><td align="center">X：服药</td><td align="center">→</td><td align="center">Y：死亡</td></tr>
-</table>
+![fig_1.10](../images/fig_1.10.png)
 
 (a) 求 $P(x,y,z)$ 及三个二维边缘分布。
 
