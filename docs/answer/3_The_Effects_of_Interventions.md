@@ -1,6 +1,6 @@
 ## 3. 干预的效果
 
-本章按[正文](../content/3_The_Effects_of_Interventions.md)整理中文解答，并补入正文遗漏的习题 3.8.1。参考核对：[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制，同名节点表示同一变量。
+本章按[正文](../content/3_The_Effects_of_Interventions.md)整理中文解答。参考核对：[完整答案手册](https://github.com/jneuer/pearl-primer/blob/master/Sol/Causal%20Inference%20in%20Statistics_%20Solution%20M%20-%20Judea%20Pearl.pdf)。图示优先引用仓库已有图片；没有对应图片的图示使用 HTML 绘制，同名节点表示同一变量。
 
 #### 3.2.1
 
@@ -330,7 +330,7 @@ E[Y\mid do(X=g(Z))]
 
 #### 3.8.1
 
-以下是参考手册习题 3.8.1 的线性模型；该题在仓库正文的“思考题”之后遗漏。手册把它标为图 3.10，与仓库正文同号的吸烟前门图不同，这里以如下图和方程为准。
+以下是习题 3.8.1 的线性模型（参考手册将其标为图 3.10，与正文同号的吸烟前门图不同，这里以如下图和方程为准）。
 
 <!-- diagram:linear381 -->
 <table>
